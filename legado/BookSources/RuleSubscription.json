@@ -1,42 +1,44 @@
-{
-    "bookSourceName": "速读谷",
-    "bookSourceUrl": "https://www.sudugu.org/",
-    "bookSourceType": 0,
-    "bookSourceGroup": "书源",
-    "bookSourceComment": "速读谷书源",
-    "bookUrlPattern": "^\\w+://www\\.sudugu\\.org/\\d+/",
-    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36\",\"Referer\":\"https://www.sudugu.org/\",\"Accept\":\"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\"}",
-    "searchUrl": "https://www.sudugu.org/i/sor.aspx?key={{key}}",
-    "enabled": true,
-    "enableCookie": true,
-    "weight": 10,
-    "ruleSearch": {
-        "bookList": "@css:.container .item",
-        "name": "@css:.itemtxt h3 a@text",
-        "author": "@css:.itemtxt p:contains(作者：) a@text##作者：##",
-        "coverUrl": "@css:.item a img@src",
-        "bookUrl": "@css:.itemtxt h3 a@href",
-        "kind": "@css:.itemtxt p span:eq(1)@text",
-        "lastChapter": "@css:.itemtxt ul li:eq(0) a@text",
-        "updateTime": "@css:.itemtxt ul li:eq(0) i@text"
-    },
-    "ruleBookInfo": {
-        "name": "@css:.itemtxt h3 a@text",
-        "author": "@css:.itemtxt p:contains(作者：) a@text##作者：##",
-        "coverUrl": "@css:.item a img@src",
-        "intro": "@css:.des p@text",
-        "kind": "@css:.itemtxt p span:eq(1)@text",
-        "lastChapter": "@css:.itemtxt ul li:eq(0) a@text",
-        "tocUrl": "@css:.itemtxt h3 a@href"
-    },
-    "ruleToc": {
-        "chapterList": "@css:.dir ul li",
-        "chapterName": "@css:a@text",
-        "chapterUrl": "@css:a@href"
-    },
-    "ruleContent": {
-        "content": "@css:.con p@textNodes",
-        "nextContentUrl": "@css:.prenext span a:contains(下一页)@href"
-    },
-    "lastUpdateTime": "1775021510603"
-}
+[
+    {
+        "bookSourceName": "速读谷",
+        "bookSourceUrl": "https://www.sudugu.org/",
+        "bookSourceType": 0,
+        "bookSourceGroup": "书源",
+        "bookSourceComment": "速读谷书源",
+        "bookUrlPattern": "^\\w+://www\\.sudugu\\.org/\\d+/",
+        "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36\",\"Referer\":\"https://www.sudugu.org/\",\"Accept\":\"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\"}",
+        "searchUrl": "https://www.sudugu.org/i/sor.aspx?key={{key}}",
+        "enabled": true,
+        "enableCookie": true,
+        "weight": 10,
+        "ruleSearch": {
+            "bookList": "@css:.container .item",
+            "name": "@css:.itemtxt h3 a@text",
+            "author": "@css:.itemtxt p:contains(作者：) a@text##作者：##",
+            "coverUrl": "@css:.item a img@src",
+            "bookUrl": "@css:.itemtxt h3 a@href",
+            "kind": "@css:.itemtxt p span:eq(1)@text",
+            "lastChapter": "@css:.itemtxt ul li:eq(0) a@text",
+            "updateTime": "@css:.itemtxt ul li:eq(0) i@text"
+        },
+        "ruleBookInfo": {
+            "name": "@css:.itemtxt h3 a@text",
+            "author": "@css:.itemtxt p:contains(作者：) a@text##作者：##",
+            "coverUrl": "@css:.item a img@src",
+            "intro": "@css:.des p@text",
+            "kind": "@css:.itemtxt p span:eq(1)@text",
+            "lastChapter": "@css:.itemtxt ul li:eq(0) a@text",
+            "tocUrl": "@css:.itemtxt h3 a@href"
+        },
+        "ruleToc": {
+            "chapterList": "@css:.dir ul li",
+            "chapterName": "@css:a@text",
+            "chapterUrl": "@css:a@href"
+        },
+        "ruleContent": {
+            "content": "@css:.con p@textNodes",
+            "nextContentUrl": "@css:.prenext span a:contains(下一页)@href"
+        },
+        "lastUpdateTime": "1775021510603"
+    }
+]
